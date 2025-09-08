@@ -22,16 +22,23 @@ Leave Management System is a web application built on the Laravel framework (v11
     - View leave application statistics
 - Email Notifications
   (Notify user of leave application submission , approval or rejection)
+
+## Stack
+ - Php v8
+ - Laravel Framework 11
+ - Blade
+ - Docker
+   - nginx:1.25-alpine
+   - mysql:8.0
+   - mailpit
     
 ## Installation
 
 1. `git clone https://github.com/emanes/leaveManagementSystem.git`
 2. `cd leaveManagementSystem`
 3. `cp .env.example .env`
-4. `php artisan key:generate`
-
-
-5. `composer update`
+4. `composer update`
+5. `php artisan key:generate`
 6. `npm i`
 
 ### Docker
@@ -43,7 +50,8 @@ Leave Management System is a web application built on the Laravel framework (v11
 
 #### DB Migration, DB Seed
 *\*\*Run the following two commands in the docker container 'manes_lvm_app' terminal*
-9. `php artisan php artisan migrate`
+
+9. `php artisan migrate`
 10. `php artisan db:seed`
 
 #### Run Npm
@@ -52,13 +60,14 @@ Leave Management System is a web application built on the Laravel framework (v11
 
 ## Enjoy
 ### Test Users Admin
-
-usr: `admin@test.com` | pwd: `Admin@123`
+- usr: `admin@test.com` | pwd: `Admin@123`
 
 ### Test Users Employee
+- usr: `oosbourne@test.com` | pwd: `Test@12345`
+- usr: `ayoung@test.com` | pwd: `Test@12345`
+- usr: `dlombardo@test.com` | pwd: `Test@12345`
 
-usr: `oosbourne@test.com` | pwd: `Test@12345`
 
-usr: `ayoung@test.com` | pwd: `Test@12345`
-
-usr: `dlombardo@test.com` | pwd: `Test@12345`
+### Web View
+ - App: http://localhost:8000/
+ - Mailpit: http://localhost:8025/
