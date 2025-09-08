@@ -27,6 +27,8 @@ Leave Management System is a web application built on the Laravel framework (v11
  - Php v8
  - Laravel Framework 11
  - Blade
+ - Node
+   - vite
  - Docker
    - nginx:1.25-alpine
    - mysql:8.0
