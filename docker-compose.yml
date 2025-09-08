@@ -40,6 +40,15 @@ services:
             - manes_lvm_db_data:/var/lib/mysql
         networks:
             - manes_lvm_network
+    mailpit:
+        image: 'axllent/mailpit:latest'
+        container_name: manes_lvm_mailpit
+        restart: unless-stopped
+        ports:
+            - '${FORWARD_MAILPIT_PORT:-1025}:1025'
+            - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025'
+        networks:
+            - manes_lvm_network
 networks:
     manes_lvm_network:
         driver: bridge

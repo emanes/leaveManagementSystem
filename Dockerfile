@@ -49,7 +49,8 @@ WORKDIR /var/www
 COPY . .
 
 # Set Permission
-##RUN chown -R www-data:www-data *
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache \
+    && chmod -R 777 /var/www/storage /var/www/bootstrap/cache
 
 # Run DB Seed & Migration
 Run php
