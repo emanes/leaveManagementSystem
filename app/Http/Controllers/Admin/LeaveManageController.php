@@ -13,6 +13,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use function Psy\debug;
 
 class LeaveManageController extends Controller
 {
@@ -33,6 +34,7 @@ class LeaveManageController extends Controller
     public function approveLeave(Request $request): RedirectResponse
     {
         $leaveRequest = LeaveRequest::find($request->id);
+
         $leaveRequest->status = 'Approved';
         $leaveRequest->save();
         $duration = Carbon::parse($leaveRequest->leave_from)->diffInDays(Carbon::parse($leaveRequest->leave_to)) + 1;

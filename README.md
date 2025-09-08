@@ -1,9 +1,3 @@
-<p align="center">
-    <a href="https://github.com/emanes" target="_blank">
-        <img src="https://avatars.githubusercontent.com/u/14974544?v2" alt="Emilio Manes">
-    </a>
-</p>
-
 ## About Leave Management System
 Leave Management System is a web application built on the Laravel framework (v11), designed for managing employee leave requests. Within this system, employees can submit leave applications, which are then reviewed and processed by the Admin. Upon approval or rejection of a leave application, the requester receives a notification via email.
 
@@ -34,46 +28,37 @@ Leave Management System is a web application built on the Laravel framework (v11
 1. `git clone https://github.com/emanes/leaveManagementSystem.git`
 2. `cd leaveManagementSystem`
 3. `cp .env.example .env`
+4. `php artisan key:generate`
 
 
-### Dependencies
-
-1. `composer update`
-2. `npm i`
+5. `composer update`
+6. `npm i`
 
 ### Docker
 #### Run
-```
-docker compose up -d
-```
-#### Stop
-```
-docker compose stop
-```
+7. `docker compose up -d`
+
 #### Connect to container
-```
-docker exec -it manes_lvm_app sh
-```
-or
-```
-docker exec -it manes_lvm_app /bin/sh
-```
+8. `docker exec -it manes_lvm_app sh` or `docker exec -it manes_lvm_app /bin/sh`
 
-### Laravel Key Generate, DB Migration, DB Seed
-1. `php artisan key:generate`
-2. `php artisan php artisan migrate`
-3. `php artisan db:seed`
+#### DB Migration, DB Seed
+*\*\*Run the following two commands in the docker container 'manes_lvm_app' terminal*
+9. `php artisan php artisan migrate`
+10. `php artisan db:seed`
+
+#### Run Npm
+11. `npm run dev`
 
 
-## Test Users Admin
-email               | password
------------------   |---------
-admin@test.com   | Admin@123
+## Enjoy
+### Test Users Admin
 
-## Test Users Employee
-email               | password
------------------   |---------
-oosbourne@test.com     | Test@12345
-ayoung@test.com     | Test@12345 
-dlombardo@test.com     | Test@12345
+usr: `admin@test.com` | pwd: `Admin@123`
 
+### Test Users Employee
+
+usr: `oosbourne@test.com` | pwd: `Test@12345`
+
+usr: `ayoung@test.com` | pwd: `Test@12345`
+
+usr: `dlombardo@test.com` | pwd: `Test@12345`

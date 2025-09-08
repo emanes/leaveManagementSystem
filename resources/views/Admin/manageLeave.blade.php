@@ -54,7 +54,6 @@
                             <table class="w-full table-auto">
                                 <thead>
                                 <tr class="bg-gray-200">
-                                    <th class="px-4 py-2 text-center">#Sl No</th>
                                     <th class="px-4 py-2 text-start">Request By</th>
                                     <th class="px-4 py-2 text-start">Leave Type</th>
                                     <th class="px-4 py-2 text-start">From</th>
@@ -72,7 +71,6 @@
                                 @endif
                                 @foreach($pendingLeaveRequests as $pendingLeaveRequest)
                                     <tr class="hover:bg-gray-100">
-                                        <td class="px-4 py-2 text-center">{{ ($pendingLeaveRequests->currentPage()-1) * $pendingLeaveRequests->perPage() + $loop->iteration }}</td>
                                         <td class="px-4 py-2">{{ $pendingLeaveRequest->employee->user->name }}</td>
                                         <td class="px-4 py-2">{{ $pendingLeaveRequest->leave_type }}</td>
                                         <td class="px-4 py-2">{{ $pendingLeaveRequest->leave_from }}</td>
@@ -120,7 +118,6 @@
                             <table class="w-full table-auto">
                                 <thead>
                                 <tr class="bg-gray-200">
-                                    <th class="px-4 py-2 text-center">#Sl No</th>
                                     <th class="px-4 py-2 text-start">Request By</th>
                                     <th class="px-4 py-2 text-start">Leave Type</th>
                                     <th class="px-4 py-2 text-start">From</th>
@@ -138,7 +135,6 @@
                                 @endif
                                 @foreach($otherLeaveRequests as $otherLeaveRequest)
                                     <tr class="hover:bg-gray-100">
-                                        <td class="px-4 py-2 text-center">{{ ($otherLeaveRequests->currentPage()-1) * $otherLeaveRequests->perPage() + $loop->iteration }}</td>
                                         <td class="px-4 py-2">{{ $otherLeaveRequest->employee->user->name }}</td>
                                         <td class="px-4 py-2">{{ $otherLeaveRequest->leave_type }}</td>
                                         <td class="px-4 py-2">{{ $otherLeaveRequest->leave_from }}</td>

@@ -77,7 +77,6 @@
                                 <table class="w-full table-auto">
                                     <thead>
                                     <tr class="bg-gray-200">
-                                        <th class="px-4 py-2 text-center">#Sl No</th>
                                         <th class="px-4 py-2 text-start">Leave Type</th>
                                         <th class="px-4 py-2 text-start">From</th>
                                         <th class="px-4 py-2 text-start">To</th>
@@ -94,7 +93,6 @@
                                     @endif
                                     @foreach($leaveRequests as $leaveRequest)
                                         <tr class="hover:bg-gray-100">
-                                            <td class="px-4 py-2 text-center">{{ ($leaveRequests->currentPage()-1) * $leaveRequests->perPage() + $loop->iteration }}</td>
                                             <td class="px-4 py-2">{{ $leaveRequest->leave_type }}</td>
                                             <td class="px-4 py-2">{{ $leaveRequest->leave_from }}</td>
                                             <td class="px-4 py-2">{{ $leaveRequest->leave_to }}</td>

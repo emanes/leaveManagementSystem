@@ -28,7 +28,7 @@
                             <table class="w-full table-auto">
                                 <thead>
                                 <tr class="bg-gray-200">
-                                    <th class="px-4 py-2 text-center">#Sl No</th>
+
                                     <th class="px-4 py-2 text-start">Name</th>
                                     <th class="px-4 py-2 text-start">Email</th>
                                     <th class="px-4 py-2 text-center">Action</th>
@@ -42,7 +42,6 @@
                                 @endif
                                 @foreach($pendingUsers as $pendingUser)
                                     <tr class="hover:bg-gray-100">
-                                        <td class="px-4 py-2 text-center">{{ ($pendingUsers->currentPage()-1) * $pendingUsers->perPage() + $loop->iteration }}</td>
                                         <td class="px-4 py-2">{{ $pendingUser->name }}</td>
                                         <td class="px-4 py-2">{{ $pendingUser->email }}</td>
                                         <td class="px-4 py-2 text-center">
@@ -81,7 +80,6 @@
                             <table class="w-full table-auto">
                                 <thead>
                                 <tr class="bg-gray-200">
-                                    <th class="px-4 py-2 text-center">#Sl No</th>
                                     <th class="px-4 py-2 text-start">Name</th>
                                     <th class="px-4 py-2 text-start">Email</th>
                                     <th class="px-4 py-2 text-center">Action</th>
@@ -95,7 +93,6 @@
                                 @endif
                                 @foreach($activeEmployees as $activeEmployee)
                                     <tr class="hover:bg-gray-100">
-                                        <td class="px-4 py-2 text-center">{{ ($activeEmployees->currentPage()-1) * $activeEmployees->perPage() + $loop->iteration }}</td>
                                         <td class="px-4 py-2">{{ $activeEmployee->name }}</td>
                                         <td class="px-4 py-2">{{ $activeEmployee->email }}</td>
                                         <td class="px-4 py-2 text-center">
@@ -135,7 +132,7 @@
                             <table class="w-full table-auto">
                                 <thead>
                                 <tr class="bg-gray-200">
-                                    <th class="px-4 py-2 text-center">#Sl No</th>
+
                                     <th class="px-4 py-2 text-start">Name</th>
                                     <th class="px-4 py-2 text-start">Email</th>
                                     <th class="px-4 py-2 text-center">Action</th>
@@ -149,7 +146,6 @@
                                 @endif
                                 @foreach($blockedEmployees as $blockedEmployee)
                                     <tr class="hover:bg-gray-100">
-                                        <td class="px-4 py-2 text-center">{{ ($blockedEmployees->currentPage()-1) * $blockedEmployees->perPage() + $loop->iteration }}</td>
                                         <td class="px-4 py-2">{{ $blockedEmployee->name }}</td>
                                         <td class="px-4 py-2">{{ $blockedEmployee->email }}</td>
                                         <td class="px-4 py-2 text-center">
