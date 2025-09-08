@@ -1,10 +1,7 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://github.com/emanes" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/14974544?v2" alt="Emilio Manes">
+    </a>
 </p>
 
 ## About Leave Management System
@@ -33,22 +30,50 @@ Leave Management System is a web application built on the Laravel framework (v11
   (Notify user of leave application submission , approval or rejection)
     
 ## Installation
-01. `git clone https://github.com/emanes/leaveManagementSystem.git`
-02. `cd leave-management-system`
-03. `composer update`
-04. `cp .env.example .env`
-05. `php artisan key:generate`
-06. `php artisan migrate:fresh --seed`
-07. `php artisan serve`
+
+1. `git clone https://github.com/emanes/leaveManagementSystem.git`
+2. `cd leaveManagementSystem`
+3. `cp .env.example .env`
+
+
+### Dependencies
+
+1. `composer update`
+2. `npm i`
+
+### Docker
+#### Run
+```
+docker compose up -d
+```
+#### Stop
+```
+docker compose stop
+```
+#### Connect to container
+```
+docker exec -it manes_lvm_app sh
+```
+or
+```
+docker exec -it manes_lvm_app /bin/sh
+```
+
+### Laravel Key Generate, DB Migration, DB Seed
+1. `php artisan key:generate`
+2. `php artisan php artisan migrate`
+3. `php artisan db:seed`
+
 
 ## Test Users Admin
 email               | password
 -----------------   |---------
 admin@test.com   | Admin@123
 
-## Test Users Employe
+## Test Users Employee
 email               | password
 -----------------   |---------
-oosbourne@test.com     | Pass@12345
-ayoung@test.com     | Pass@12345 
-dlombardo@test.com     | Pass@12345
+oosbourne@test.com     | Test@12345
+ayoung@test.com     | Test@12345 
+dlombardo@test.com     | Test@12345
+
