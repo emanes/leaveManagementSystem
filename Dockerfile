@@ -9,7 +9,7 @@ RUN composer install --no-interaction --no-plugins --no-scripts --prefer-dist
 # Stage 2: Build asset frontend Node.js
 FROM node:18-alpine as node_builder
 
-WORKDIR /app
+WORKDIR /
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
